@@ -1,0 +1,9 @@
+ini adalah jawaban untuk tes pekerjaan dari mplus.
+
+Tes ini menggunakan Framework CI dan framwork js angularjs dan template bootstrap
+untuk menjalankan aplikasi ini , silahkan upload dahulu database yang telah tersedia.
+
+
+
+
+terima kasih 
