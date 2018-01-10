@@ -36,7 +36,7 @@
                 <th class="column-title">No </th>
                 <th class="column-title">Title  </th>
                 <th class="column-title">Author </th>
-                <th class="column-title">Tanggal Published</th>
+                <th class="column-title">date Published</th>
                 <th class="column-title">Number Of  Pages </th>
                 <th class="column-title">Type Of Book </th>
                 <th class="column-title no-link last" width="150px;"><span class="nobr">Action</span>
@@ -99,13 +99,13 @@
                             </div> <!--/ Nama -->
 
 
-                         <!--    <div class="form-group">
-                                <label for="tanggal" class="col-md-4 control-label">Tanggal</label>
+                            <div class="form-group">
+                                <label for="date" class="col-md-4 control-label">date</label>
                                 <div class="col-md-6">                                   
-                                <input type="text" name="tanggal" id="tanggal" ng-model="tanggal"  class="form-control tanggal" placeholder="tanggal">
+                                <input type="text" name="date" id="date" ng-model="date"  class="form-control date" placeholder="date">
                                     <span class="help-block"></span>
                                 </div>
-                            </div> <!--/ Tempat Lahir -->
+                            </div> <!--/ Tempat Lahir-->
 
                             <div class="form-group">
                                 <label for="number" class="col-md-4 control-label">Number</label>
@@ -114,7 +114,7 @@
                                     <span class="help-block"></span>
 
                                 </div>
-                            </div> <!--/ Tanggal Lahir -->
+                            </div> <!--/ date Lahir -->
 
                             <div class="form-group">
                                 <label for="type" class="col-md-4 control-label">Type</label>
@@ -187,13 +187,13 @@
                             </div> <!--/ Nama -->
 
 
-                         <!--    <div class="form-group">
-                                <label for="tanggal" class="col-md-4 control-label">Tanggal</label>
+                            <div class="form-group">
+                                <label for="date" class="col-md-4 control-label">Date</label>
                                 <div class="col-md-6">                                   
-                                <input type="text" name="tanggal" id="tanggal" ng-model="tanggal"  class="form-control tanggal" placeholder="tanggal">
+                                <input type="text" name="date" id="date" ng-model="book.date"  class="form-control date" placeholder="date">
                                     <span class="help-block"></span>
                                 </div>
-                            </div> <!--/ Tempat Lahir -->
+                            </div> <!--/ Tempat Lahir-->
 
                             <div class="form-group">
                                 <label for="number" class="col-md-4 control-label">Number</label>
@@ -202,7 +202,7 @@
                                     <span class="help-block"></span>
 
                                 </div>
-                            </div> <!--/ Tanggal Lahir -->
+                            </div> <!--/ date Lahir -->
 
                             <div class="form-group">
                                 <label for="type" class="col-md-4 control-label">Type</label>
@@ -273,7 +273,7 @@ app.directive('ngConfirmClick',[
             $http({
               method:'POST',
               url:baseUrl+'mplus/saveBook',
-              data:{title:$scope.title,author:$scope.author,number:$scope.number,type:$scope.type},
+              data:{title:$scope.title,author:$scope.author,date:$scope.date,number:$scope.number,type:$scope.type},
             }).then(function(data){
               if(data.data=="success")
               {
@@ -307,7 +307,7 @@ app.directive('ngConfirmClick',[
         $http({
           method:'POST',
           url:baseUrl+'mplus/updateBook',
-              data:{id_books:$scope.book.id_books,title:$scope.book.title,author:$scope.book.author,number:$scope.book.number,type:$scope.book.type},
+              data:{id_books:$scope.book.id_books,date:$scope.book.date,title:$scope.book.title,author:$scope.book.author,number:$scope.book.number,type:$scope.book.type},
 
         }).then(function(data){
          if(data.data=="success")
@@ -351,13 +351,13 @@ app.directive('ngConfirmClick',[
 //           $scope.displayStud();
 //         })
 //       }
-//   //proses menampilkan data saat di uptanggal
+//   //proses menampilkan data saat di update
 //     $scope.editStud=function(id, nama, alamat, jeniskelamin){ 
 //         $scope.id=id;
 //         $scope.nama=nama;
 //         $scope.alamat=alamat;
 //         $scope.jenis=jeniskelamin;
-//         $scope.btnName="Uptanggal";
+//         $scope.btnName="Update";
 //         $scope.obj.idisable=true;
 //         $scope.displayStud();
 //       }

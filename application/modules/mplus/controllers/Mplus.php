@@ -32,7 +32,7 @@ class Mplus extends CI_Controller
 	{
 		
 		$request = json_decode(file_get_contents('php://input'),true);
-		$request['date'] = date('Y-m-d');
+		// $request['date'] = date('Y-m-d');
 
 		$data =$this->db->insert('books',$request);
 
@@ -68,7 +68,7 @@ class Mplus extends CI_Controller
 	function updateBook()
 	{
 		$request = json_decode(file_get_contents('php://input'),true);
-		$request['date'] = date('Y-m-d');
+		// $request['date'] = date('Y-m-d');
 
 		
 		$data = $this->db->update('books',$request,array('id_books'=>$request['id_books']));
